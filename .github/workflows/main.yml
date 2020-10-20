@@ -36,7 +36,8 @@ jobs:
         run: |
           git config --local user.email "mr-lili@163.com"
           git config --local user.name "lili"
-          git commit -m "Add changes" -a
+          git add .
+          git commit -m "create pdf" -a
 
       # - name: Upload
       #   uses: actions/upload-artifact@v2
