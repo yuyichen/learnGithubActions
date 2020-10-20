@@ -30,7 +30,7 @@ jobs:
           # Location of markdown files in github repository
           # markdown_dir: # default is doc
           # Location to output PDF files to
-          output_dir: ${{ GITHUB_WORKSPACE }}/pdf # default is tmp
+          output_dir: '${{ GITHUB_WORKSPACE }}/pdf' # default is tmp
 
       # - name: Upload
       #   uses: actions/upload-artifact@v2
