@@ -26,11 +26,11 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: mkrakowitzer/actions-makepdfs@4727f3a951582074b33fadc4d2e7ef97ffb4b7ea
         uses: mkrakowitzer/actions-makepdfs@v1.2
-        # with:
+        with:
           # Location of markdown files in github repository
           # markdown_dir: # default is doc
           # Location to output PDF files to
-          output_dir: '${{ GITHUB_WORKSPACE }}/pdf' # default is tmp
+          output_dir: ${{ GITHUB_WORKSPACE }}/pdf # default is tmp
 
       # - name: Upload
       #   uses: actions/upload-artifact@v2
