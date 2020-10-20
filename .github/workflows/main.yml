@@ -29,3 +29,10 @@ jobs:
           # markdown_dir: # default is doc
           # Location to output PDF files to
           # output_dir: # default is tmp
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdfs
+          path: tmp # or path/to/artifact
+
