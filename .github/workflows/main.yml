@@ -30,11 +30,17 @@ jobs:
           # Location of markdown files in github repository
           # markdown_dir: # default is doc
           # Location to output PDF files to
-          # output_dir: # default is tmp
+          output_dir: ${{ GITHUB_WORKSPACE }}/pdf # default is tmp
 
-      - name: Upload
-        uses: actions/upload-artifact@v2
+      # - name: Upload
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: pdfs # 保存的zip包名
+      #     path: tmp # 需要保存的目录或文件
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: pdfs # 保存的zip包名
-          path: tmp # 需要保存的目录或文件
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: ${{ github.ref }}
 
