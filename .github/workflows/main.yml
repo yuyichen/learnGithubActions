@@ -30,7 +30,13 @@ jobs:
           # Location of markdown files in github repository
           # markdown_dir: # default is doc
           # Location to output PDF files to
-          output_dir: ${{ github.workspace }}/pdf # default is tmp
+          output_dir: pdf # default is tmp
+
+      - name: Commit files
+        run: |
+          git config --local user.email "mr-lili@163.com"
+          git config --local user.name "lili"
+          git commit -m "Add changes" -a
 
       # - name: Upload
       #   uses: actions/upload-artifact@v2
